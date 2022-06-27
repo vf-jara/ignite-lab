@@ -3,7 +3,7 @@ import { CaretRight, DiscordLogo, FileArrowDown, Image, Lightning } from "phosph
 import { gql, useQuery } from "@apollo/client";
 import '@vime/core/themes/default.css';
 
-const GET_LESSON_BT_SLUG_QUERY = gql`
+const GET_LESSON_BY_SLUG_QUERY = gql`
     query GetLessonBySlug ($slug: String) {
     lesson(where: {slug: $slug}) {
         title
@@ -36,11 +36,13 @@ interface VideoProps {
 }
 
 export function Video(props: VideoProps) {
-    const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BT_SLUG_QUERY, {
+    const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY, {
         variables: {
             slug: props.lessonSlug,
         }
     })
+
+    console.log(data);
 
     if (!data) {
         return (

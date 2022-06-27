@@ -10,7 +10,7 @@ module.exports = {
         sans: 'Roboto, sans-serif',
       },
       backgroundImage: {
-        blur: 'url(/src/assets/blur-background.png)',
+        blur: 'url(/assets/blur-background.png)',
       },
       colors: {
         green: {

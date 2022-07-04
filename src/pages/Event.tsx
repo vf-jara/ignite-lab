@@ -12,7 +12,7 @@ export function Event() {
 
 
     return (
-        <div className="flex flex-col min-h-screen overflow-x-hidden">
+        <div className="flex flex-col min-h-screen">
             <div className="absolute top-5 right-4 lg:hidden">
                 <button onClick={() => setOpen(!open)}>
                     <List
@@ -25,7 +25,7 @@ export function Event() {
                 {slug ?
                     <Video lessonSlug={slug} />
                     : <div className="flex-1" />}
-                <div className={`flex absolute lg:static ${open ? 'right-0 min-h-screen z-50' : 'right-[-400px] min-h-screen'} transition-all ease-in-out duration-500`}>
+                <div className={`lg:flex absolute lg:static lg:z-auto lg:w-auto lg:h-auto ${open ? ' flex right-0 min-h-screen z-50' : 'hidden'} transition-all ease-in-out duration-500`}>
                     <Sidebar />
 
                 </div>

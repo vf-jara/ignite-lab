@@ -39,8 +39,8 @@ export function Video(props: VideoProps) {
             </div>
 
             <div className="p-8 max-w-[1100px] mx-auto">
-                <div className="flex items-start gap-16">
-                    <div className="flex-1">
+                <div className="flex flex-col lg:flex-row items-start gap-16">
+                    <div className="flex-1 flex-col">
                         <h1 className="text-2xl font-bold">
                             {data.lesson.title}
                         </h1>
@@ -77,8 +77,9 @@ export function Video(props: VideoProps) {
                     </div>
 
                 </div>
-                <div className="gap-8 mt-20 grid grid-cols-2">
-                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                <div className="gap-8 mt-20 grid lg:grid-cols-2">
+
+                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-3 lg:gap-6 hover:bg-gray-600 transition-colors">
                         <div className="bg-green-700 h-full p-6 flex items-center">
                             <FileArrowDown size={40} />
                         </div>
@@ -94,7 +95,7 @@ export function Video(props: VideoProps) {
                             <CaretRight size={24} />
                         </div>
                     </a>
-                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-3 lg:gap-6 hover:bg-gray-600 transition-colors">
                         <div className="bg-green-700 h-full p-6 flex items-center">
                             <Image size={40} />
                         </div>
